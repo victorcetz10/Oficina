@@ -1,0 +1,1311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinador"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:orientation="vertical">
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical"
+                    android:paddingRight="1dp"
+                    android:paddingLeft="5dp"
+                    android:paddingEnd="1dp"
+                    android:paddingStart="5dp"
+                    android:background="@color/colorSecondary"
+                    android:weightSum="1.0">
+                    <TextView
+                        android:id="@+id/et_titulo_catalogos"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:text="@string/sync_catalogos"
+                        android:textColor="@color/colorWhite" />
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/et_clientes"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:text="@string/sync_tipo_persona"
+                    android:background="@drawable/bakground"
+                    android:paddingLeft="5dp"/>
+
+                <ProgressBar
+                    android:id="@+id/progress_tipo_persona"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:adjustViewBounds="false"
+                    android:background="@color/colorSecondary"
+                    android:indeterminate="true"
+                    android:padding="0dp"
+                    android:scaleType="fitCenter" />
+
+                <ImageView
+                    android:id="@+id/imagev_tipo_persona"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:adjustViewBounds="false"
+                    android:layout_height="20dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ok"
+                    android:background="@color/colorSecondary"/>
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/et_agenda"
+                    android:text="@string/sync_tipo_documento"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:background="@drawable/bakground"
+                    android:paddingLeft="5dp"/>
+
+                <ProgressBar
+                    android:id="@+id/progress_tipo_documentos"
+                    android:background="@color/colorSecondary"
+                    android:padding="0dp"
+                    android:adjustViewBounds="false"
+                    android:scaleType="fitCenter"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:indeterminate="true"/>
+
+                <ImageView
+                    android:id="@+id/imagev_tipo_documento"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:adjustViewBounds="false"
+                    android:layout_height="20dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ok"
+                    android:background="@color/colorSecondary"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorBlue">
+
+                <TextView
+                    android:id="@+id/et_tipo_pago"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:text="@string/sync_tipo_pago"
+                    android:background="@drawable/bakground"
+                    android:paddingLeft="5dp" />
+
+                <ProgressBar
+                    android:id="@+id/progress_tipo_pago"
+                    android:background="@color/colorSecondary"
+                    android:padding="0dp"
+                    android:adjustViewBounds="false"
+                    android:scaleType="fitCenter"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:indeterminate="true"/>
+
+                <ImageView
+                    android:id="@+id/imagev_tipo_pago"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:adjustViewBounds="false"
+                    android:layout_height="20dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ok"
+                    android:background="@color/colorSecondary"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorBlue">
+                <TextView
+                    android:id="@+id/et_tipo_amortizacion"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:text="@string/sync_tipo_amortizacion"
+                    android:background="@drawable/bakground"
+                    android:paddingLeft="5dp" />
+
+                <ProgressBar
+                    android:id="@+id/progress_tipo_amortizacion"
+                    android:background="@color/colorSecondary"
+                    android:padding="0dp"
+                    android:adjustViewBounds="false"
+                    android:scaleType="fitCenter"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:indeterminate="true"/>
+
+                <ImageView
+                    android:id="@+id/imagev_tipo_amortizacion"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:adjustViewBounds="false"
+                    android:layout_height="20dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ok"
+                    android:background="@color/colorSecondary"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:background="@color/colorBlue">
+
+                <TextView
+                    android:id="@+id/et_instrumento_monetario"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:text="@string/sync_instrumento_monetarios"
+                    android:background="@drawable/bakground"
+                    android:paddingLeft="5dp" />
+
+                <ProgressBar
+                    android:id="@+id/progress_instrumento_monetario"
+                    android:background="@color/colorSecondary"
+                    android:padding="0dp"
+                    android:adjustViewBounds="false"
+                    android:scaleType="fitCenter"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:indeterminate="true"/>
+
+                <ImageView
+                    android:id="@+id/imagev_instrumento_monetario"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:adjustViewBounds="false"
+                    android:layout_height="20dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ok"
+                    android:background="@color/colorSecondary"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:background="@color/colorBlue">
+
+                <TextView
+                    android:id="@+id/et_codigo_postal"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:text="@string/sync_codigo_postal"
+                    android:background="@drawable/bakground"
+                    android:paddingLeft="5dp" />
+
+                <ProgressBar
+                    android:id="@+id/progress_codigo_postal"
+                    android:background="@color/colorSecondary"
+                    android:padding="0dp"
+                    android:adjustViewBounds="false"
+                    android:scaleType="fitCenter"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:indeterminate="true"/>
+
+                <ImageView
+                    android:id="@+id/imagev_codigo_postal"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:adjustViewBounds="false"
+                    android:layout_height="20dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ok"
+                    android:background="@color/colorSecondary"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:background="@color/colorBlue">
+
+                <TextView
+                    android:id="@+id/et_codigo"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:text="@string/sync_codigo"
+                    android:background="@drawable/bakground"
+                    android:paddingLeft="5dp" />
+
+                <ProgressBar
+                    android:id="@+id/progress_codigo"
+                    android:background="@color/colorSecondary"
+                    android:padding="0dp"
+                    android:adjustViewBounds="false"
+                    android:scaleType="fitCenter"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:indeterminate="true"/>
+
+                <ImageView
+                    android:id="@+id/imagev_codigo"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:adjustViewBounds="false"
+                    android:layout_height="20dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ok"
+                    android:background="@color/colorSecondary"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:background="@color/colorBlue">
+
+                <TextView
+                    android:id="@+id/et_pais"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:text="@string/sync_pais"
+                    android:background="@drawable/bakground"
+                    android:paddingLeft="5dp" />
+
+                <ProgressBar
+                    android:id="@+id/progress_pais"
+                    android:background="@color/colorSecondary"
+                    android:padding="0dp"
+                    android:adjustViewBounds="false"
+                    android:scaleType="fitCenter"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:indeterminate="true"/>
+
+                <ImageView
+                    android:id="@+id/imagev_pais"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:adjustViewBounds="false"
+                    android:layout_height="20dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ok"
+                    android:background="@color/colorSecondary"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:background="@color/colorBlue">
+
+                <TextView
+                    android:id="@+id/et_estado"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:text="@string/sync_estado"
+                    android:background="@drawable/bakground"
+                    android:paddingLeft="5dp" />
+
+                <ProgressBar
+                    android:id="@+id/progress_estado"
+                    android:background="@color/colorSecondary"
+                    android:padding="0dp"
+                    android:adjustViewBounds="false"
+                    android:scaleType="fitCenter"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:indeterminate="true"/>
+
+                <ImageView
+                    android:id="@+id/imagev_estado"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:adjustViewBounds="false"
+                    android:layout_height="20dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ok"
+                    android:background="@color/colorSecondary"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:background="@color/colorBlue">
+
+                <TextView
+                    android:id="@+id/et_municipio"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:text="@string/sync_municipio"
+                    android:background="@drawable/bakground"
+                    android:paddingLeft="5dp" />
+
+                <ProgressBar
+                    android:id="@+id/progress_municipio"
+                    android:background="@color/colorSecondary"
+                    android:padding="0dp"
+                    android:adjustViewBounds="false"
+                    android:scaleType="fitCenter"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:indeterminate="true"/>
+
+                <ImageView
+                    android:id="@+id/imagev_municipio"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:adjustViewBounds="false"
+                    android:layout_height="20dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ok"
+                    android:background="@color/colorSecondary"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:background="@color/colorBlue">
+
+                <TextView
+                    android:id="@+id/et_estado_civil"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:text="@string/sync_estado_civil"
+                    android:background="@drawable/bakground"
+                    android:paddingLeft="5dp" />
+
+                <ProgressBar
+                    android:id="@+id/progress_estado_civil"
+                    android:background="@color/colorSecondary"
+                    android:padding="0dp"
+                    android:adjustViewBounds="false"
+                    android:scaleType="fitCenter"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:indeterminate="true"/>
+
+                <ImageView
+                    android:id="@+id/imagev_estado_civil"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:adjustViewBounds="false"
+                    android:layout_height="20dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ok"
+                    android:background="@color/colorSecondary"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:background="@color/colorBlue">
+
+                <TextView
+                    android:id="@+id/et_categoria_actividad_economica"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:text="@string/sync_categoria_actividad_economica"
+                    android:background="@drawable/bakground"
+                    android:paddingLeft="5dp" />
+
+                <ProgressBar
+                    android:id="@+id/progress_categoria_actividad_economica"
+                    android:background="@color/colorSecondary"
+                    android:padding="0dp"
+                    android:adjustViewBounds="false"
+                    android:scaleType="fitCenter"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:indeterminate="true"/>
+
+                <ImageView
+                    android:id="@+id/imagev_categoria_actividad_economica"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:adjustViewBounds="false"
+                    android:layout_height="20dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ok"
+                    android:background="@color/colorSecondary"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:background="@color/colorBlue">
+
+                <TextView
+                    android:id="@+id/et_actividad_economica"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:text="@string/sync_actividad_economica"
+                    android:background="@drawable/bakground"
+                    android:paddingLeft="5dp" />
+
+                <ProgressBar
+                    android:id="@+id/progress_actividad_economica"
+                    android:background="@color/colorSecondary"
+                    android:padding="0dp"
+                    android:adjustViewBounds="false"
+                    android:scaleType="fitCenter"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:indeterminate="true"/>
+
+                <ImageView
+                    android:id="@+id/imagev_actividad_economica"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:adjustViewBounds="false"
+                    android:layout_height="20dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ok"
+                    android:background="@color/colorSecondary"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical"
+                    android:paddingRight="1dp"
+                    android:paddingLeft="5dp"
+                    android:paddingEnd="1dp"
+                    android:paddingStart="5dp"
+                    android:background="@color/colorSecondary"
+                    android:weightSum="1.0">
+                    <TextView
+                        android:id="@+id/et_titulo_configuraciones"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:text="@string/sync_configuraciones"
+                        android:textColor="@color/colorWhite" />
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/et_grupo_cliente"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:text="@string/sync_grupo_cliente"
+                    android:background="@drawable/bakground"
+                    android:paddingLeft="5dp" />
+
+                <ProgressBar
+                    android:id="@+id/progress_grupo_cliente"
+                    android:background="@color/colorSecondary"
+                    android:padding="0dp"
+                    android:adjustViewBounds="false"
+                    android:scaleType="fitCenter"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:indeterminate="true"/>
+
+                <ImageView
+                    android:id="@+id/imagev_grupo_cliente"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:adjustViewBounds="false"
+                    android:layout_height="20dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ok"
+                    android:background="@color/colorSecondary"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/et_relacion_contacto"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:text="@string/sync_relacion_contacto"
+                    android:background="@drawable/bakground"
+                    android:paddingLeft="5dp" />
+
+                <ProgressBar
+                    android:id="@+id/progress_relacion_contacto"
+                    android:background="@color/colorSecondary"
+                    android:padding="0dp"
+                    android:adjustViewBounds="false"
+                    android:scaleType="fitCenter"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:indeterminate="true"/>
+
+                <ImageView
+                    android:id="@+id/imagev_relacion_contacto"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:adjustViewBounds="false"
+                    android:layout_height="20dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ok"
+                    android:background="@color/colorSecondary"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/et_documento_requerido"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:text="@string/sync_documento_requerido"
+                    android:background="@drawable/bakground"
+                    android:paddingLeft="5dp" />
+
+                <ProgressBar
+                    android:id="@+id/progress_documento_requerido"
+                    android:background="@color/colorSecondary"
+                    android:padding="0dp"
+                    android:adjustViewBounds="false"
+                    android:scaleType="fitCenter"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:indeterminate="true"/>
+
+                <ImageView
+                    android:id="@+id/imagev_documento_requerido"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:adjustViewBounds="false"
+                    android:layout_height="20dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ok"
+                    android:background="@color/colorSecondary"/>
+
+            </TableRow>
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/et_producto"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:text="@string/sync_producto"
+                    android:background="@drawable/bakground"
+                    android:paddingLeft="5dp" />
+
+                <ProgressBar
+                    android:id="@+id/progress_producto"
+                    android:background="@color/colorSecondary"
+                    android:padding="0dp"
+                    android:adjustViewBounds="false"
+                    android:scaleType="fitCenter"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:indeterminate="true"/>
+
+                <ImageView
+                    android:id="@+id/imagev_producto"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:adjustViewBounds="false"
+                    android:layout_height="20dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ok"
+                    android:background="@color/colorSecondary"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/et_banco"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:text="@string/sync_banco"
+                    android:background="@drawable/bakground"
+                    android:paddingLeft="5dp" />
+
+                <ProgressBar
+                    android:id="@+id/progress_banco"
+                    android:background="@color/colorSecondary"
+                    android:padding="0dp"
+                    android:adjustViewBounds="false"
+                    android:scaleType="fitCenter"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:indeterminate="true"/>
+
+                <ImageView
+                    android:id="@+id/imagev_banco"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:adjustViewBounds="false"
+                    android:layout_height="20dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ok"
+                    android:background="@color/colorSecondary"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/et_canal_cobranza"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:text="@string/sync_canal_cobranza"
+                    android:background="@drawable/bakground"
+                    android:paddingLeft="5dp" />
+
+                <ProgressBar
+                    android:id="@+id/progress_canal_cobranza"
+                    android:background="@color/colorSecondary"
+                    android:padding="0dp"
+                    android:adjustViewBounds="false"
+                    android:scaleType="fitCenter"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:indeterminate="true"/>
+
+                <ImageView
+                    android:id="@+id/imagev_canal_cobranza"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:adjustViewBounds="false"
+                    android:layout_height="20dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ok"
+                    android:background="@color/colorSecondary"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical"
+                    android:paddingRight="1dp"
+                    android:paddingLeft="5dp"
+                    android:paddingEnd="1dp"
+                    android:paddingStart="5dp"
+                    android:background="@color/colorSecondary"
+                    android:weightSum="1.0">
+                    <TextView
+                        android:id="@+id/et_titulo_operacion"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:text="@string/sync_operacion"
+                        android:textColor="@color/colorWhite" />
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/et_cliente"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:text="@string/sync_cliente"
+                    android:background="@drawable/bakground"
+                    android:paddingLeft="5dp" />
+
+                <ProgressBar
+                    android:id="@+id/progress_cliente"
+                    android:background="@color/colorSecondary"
+                    android:padding="0dp"
+                    android:adjustViewBounds="false"
+                    android:scaleType="fitCenter"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:indeterminate="true"/>
+
+                <ImageView
+                    android:id="@+id/imagev_cliente"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:adjustViewBounds="false"
+                    android:layout_height="20dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ok"
+                    android:background="@color/colorSecondary"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/et_documento_entregado"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:text="@string/sync_documento_entregado"
+                    android:background="@drawable/bakground"
+                    android:paddingLeft="5dp" />
+
+                <ProgressBar
+                    android:id="@+id/progress_documento_entregado"
+                    android:background="@color/colorSecondary"
+                    android:padding="0dp"
+                    android:adjustViewBounds="false"
+                    android:scaleType="fitCenter"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:indeterminate="true"/>
+
+                <ImageView
+                    android:id="@+id/imagev_documento_entregado"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:adjustViewBounds="false"
+                    android:layout_height="20dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ok"
+                    android:background="@color/colorSecondary"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/et_archivo_documento_entregado"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:text="@string/sync_archivo_documento_entregado"
+                    android:background="@drawable/bakground"
+                    android:paddingLeft="5dp" />
+
+                <ProgressBar
+                    android:id="@+id/progress_archivo_documento_entregado"
+                    android:background="@color/colorSecondary"
+                    android:padding="0dp"
+                    android:adjustViewBounds="false"
+                    android:scaleType="fitCenter"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:indeterminate="true"/>
+
+                <ImageView
+                    android:id="@+id/imagev_archivo_documento_entregado"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:adjustViewBounds="false"
+                    android:layout_height="20dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ok"
+                    android:background="@color/colorSecondary"/>
+
+            </TableRow>
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/et_cotizador"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:text="@string/sync_cotizador"
+                    android:background="@drawable/bakground"
+                    android:paddingLeft="5dp" />
+
+                <ProgressBar
+                    android:id="@+id/progress_cotizador"
+                    android:background="@color/colorSecondary"
+                    android:padding="0dp"
+                    android:adjustViewBounds="false"
+                    android:scaleType="fitCenter"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:indeterminate="true"/>
+
+                <ImageView
+                    android:id="@+id/imagev_cotizador"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:adjustViewBounds="false"
+                    android:layout_height="20dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ok"
+                    android:background="@color/colorSecondary"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/et_solicitud"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:text="@string/sync_solicitud"
+                    android:background="@drawable/bakground"
+                    android:paddingLeft="5dp" />
+
+                <ProgressBar
+                    android:id="@+id/progress_solicitud"
+                    android:background="@color/colorSecondary"
+                    android:padding="0dp"
+                    android:adjustViewBounds="false"
+                    android:scaleType="fitCenter"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:indeterminate="true"/>
+
+                <ImageView
+                    android:id="@+id/imagev_solicitud"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:adjustViewBounds="false"
+                    android:layout_height="20dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ok"
+                    android:background="@color/colorSecondary"/>
+
+            </TableRow>
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/et_bitacora_credito"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:text="@string/sync_bitacora_credito"
+                    android:background="@drawable/bakground"
+                    android:paddingLeft="5dp" />
+
+                <ProgressBar
+                    android:id="@+id/progress_bitacora_credito"
+                    android:background="@color/colorSecondary"
+                    android:padding="0dp"
+                    android:adjustViewBounds="false"
+                    android:scaleType="fitCenter"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:indeterminate="true"/>
+
+                <ImageView
+                    android:id="@+id/imagev_bitacora_credito"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:adjustViewBounds="false"
+                    android:layout_height="20dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ok"
+                    android:background="@color/colorSecondary"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/et_archivo_bitacora_credito"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:text="@string/sync_archivo_bitacora_credito"
+                    android:background="@drawable/bakground"
+                    android:paddingLeft="5dp" />
+
+                <ProgressBar
+                    android:id="@+id/progress_archivo_bitacora_credito"
+                    android:background="@color/colorSecondary"
+                    android:padding="0dp"
+                    android:adjustViewBounds="false"
+                    android:scaleType="fitCenter"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:indeterminate="true"/>
+
+                <ImageView
+                    android:id="@+id/imagev_archivo_bitacora_credito"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:adjustViewBounds="false"
+                    android:layout_height="20dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ok"
+                    android:background="@color/colorSecondary"/>
+
+            </TableRow>
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/et_pago"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:text="@string/sync_pago"
+                    android:background="@drawable/bakground"
+                    android:paddingLeft="5dp" />
+
+                <ProgressBar
+                    android:id="@+id/progress_pago"
+                    android:background="@color/colorSecondary"
+                    android:padding="0dp"
+                    android:adjustViewBounds="false"
+                    android:scaleType="fitCenter"
+                    android:layout_height="20dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:indeterminate="true"/>
+
+                <ImageView
+                    android:id="@+id/imagev_pago"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="1.0"
+                    android:adjustViewBounds="false"
+                    android:layout_height="20dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ok"
+                    android:background="@color/colorSecondary"/>
+
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

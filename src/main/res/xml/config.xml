@@ -1,0 +1,4 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <preference name="fullscreen" value="false" />
+    <preference name="android-windowSoftInputMode" value="stateVisible" />
+</PreferenceScreen>

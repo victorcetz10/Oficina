@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/accion_sync"
+        android:icon="@drawable/icono_sync"
+        android:title="@string/accion_sync"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/accion_reiniciar"
+        android:title="@string/accion_reiniciar"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/accion_logout"
+        android:icon="@drawable/icono_salir"
+        android:title="@string/accion_salir"
+        app:showAsAction="never" />
+</menu>

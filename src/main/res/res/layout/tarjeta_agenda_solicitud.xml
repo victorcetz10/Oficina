@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="1dp"
+    android:layout_margin="10dp"
+    android:background="@drawable/card_edge">
+
+    <!-- A CardView that contains a TextView -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/tarjeta_agenda_solicitud"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/text_cliente"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textColor="@color/colorWhite" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@color/colorOrange"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_margin="5dp">
+
+                    <TextView
+                        android:id="@+id/text_detalle_solicitud"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="12sp"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorWhite"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginStart="1dp"
+                        android:paddingLeft="10dp"
+                        android:paddingStart="10dp"
+                        android:paddingRight="19dp"
+                        android:paddingEnd="10dp"
+                        android:textAlignment="center"/>
+
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_margin="5dp">
+
+                    <TextView
+                        android:id="@+id/text_clave_solicitud"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/abreviacion_clave"
+                        android:textSize="12sp"
+                        android:layout_weight="0.5"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginStart="1dp"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:id="@+id/text_contrato_solicitud"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/abreviacion_contrato"
+                        android:textSize="12sp"
+                        android:layout_weight="0.5"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginStart="1dp"
+                        android:textAlignment="center"/>
+
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_margin="5dp">
+
+                    <TextView
+                        android:id="@+id/text_monto_pago"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:text=""
+                        android:gravity="right"
+                        android:paddingRight="10dp"
+                        android:paddingEnd="10dp"
+                        android:layout_marginTop="2dp"
+                        android:textSize="15sp"
+                        android:layout_weight="0.4"/>
+
+                    <TextView
+                        android:id="@+id/text_dias_atraso"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:text="@string/abreviacion_atraso"
+                        android:gravity="right"
+                        android:layout_marginTop="2dp"
+                        android:textSize="14sp"
+                        android:layout_weight="0.3"/>
+
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_margin="5dp">
+
+                    <Button
+                        android:id="@+id/btnBitacora"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:background="@color/colorWhite"
+                        android:text="@string/accion_bitacora_credito"
+                        app:srcCompat="@drawable/bitacora_blue" />
+
+                    <Button
+                        android:id="@+id/btnPagar"
+                        android:text="@string/accion_pagar"
+                        android:padding="0dp"
+                        android:background="@color/colorWhite"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        app:srcCompat="@drawable/pago_blue"/>
+
+                </LinearLayout>
+
+            </TableRow>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinador"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+    <TableLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:weightSum="1.0">
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".33"
+            android:orientation="horizontal"
+            android:background="@color/colorBlue"
+            android:weightSum="1.0">
+
+            <ImageView
+                android:id="@+id/iv_logo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/seccion_clientes"
+                android:adjustViewBounds="false"
+                android:cropToPadding="false"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                app:srcCompat="@drawable/logo_movil" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".33"
+            android:orientation="horizontal"
+            android:background="@color/colorBlue"
+            android:weightSum="1.0">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:orientation="vertical"
+                android:paddingRight="1dp"
+                android:paddingLeft="5dp"
+                android:paddingEnd="1dp"
+                android:paddingStart="5dp"
+                android:weightSum="1.0">
+
+                <ImageButton
+                    android:id="@+id/ib_clientes"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.8"
+                    android:background="@color/colorSecondary"
+                    android:contentDescription="@string/seccion_clientes"
+                    android:padding="50dp"
+                    android:adjustViewBounds="false"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/cliente" />
+
+                <TextView
+                    android:id="@+id/et_clientes"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.2"
+                    android:background="@color/colorBlue"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:text="@string/seccion_clientes"
+                    android:textColor="@color/colorWhite" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:orientation="vertical"
+                android:paddingRight="5dp"
+                android:paddingLeft="1dp"
+                android:paddingEnd="5dp"
+                android:paddingStart="1dp"
+                android:weightSum="1.0">
+
+                <ImageButton
+                    android:id="@+id/ib_agenda"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.8"
+                    android:background="@color/colorSecondary"
+                    android:contentDescription="@string/seccion_agenda"
+                    android:padding="50dp"
+                    android:adjustViewBounds="false"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/agenda" />
+
+                <TextView
+                    android:id="@+id/et_agenda"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.2"
+                    android:background="@color/colorBlue"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:text="@string/seccion_agenda"
+                    android:textColor="@color/colorWhite" />
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".33"
+            android:orientation="horizontal"
+            android:background="@color/colorBlue"
+            android:weightSum="1.0">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:orientation="vertical"
+                android:paddingRight="1dp"
+                android:paddingLeft="5dp"
+                android:paddingEnd="1dp"
+                android:paddingStart="5dp"
+                android:weightSum="1.0">
+
+                <ImageButton
+                    android:id="@+id/ib_mapa"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.8"
+                    android:background="@color/colorSecondary"
+                    android:contentDescription="@string/seccion_mapa"
+                    android:padding="50dp"
+                    android:adjustViewBounds="false"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/mapa_blue" />
+
+                <TextView
+                    android:id="@+id/et_mapa"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.2"
+                    android:background="@color/colorBlue"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:text="@string/seccion_mapa"
+                    android:textColor="@color/colorWhite" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:orientation="vertical"
+                android:paddingRight="5dp"
+                android:paddingLeft="1dp"
+                android:paddingEnd="5dp"
+                android:paddingStart="1dp"
+                android:weightSum="1.0">
+
+                <ImageButton
+                    android:id="@+id/ib_sync"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.8"
+                    android:background="@color/colorSecondary"
+                    android:contentDescription="@string/seccion_sync"
+                    android:padding="50dp"
+                    android:adjustViewBounds="false"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/icono_sync_blue" />
+
+                <TextView
+                    android:id="@+id/et_sync"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.2"
+                    android:background="@color/colorBlue"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:text="@string/seccion_sync"
+                    android:textColor="@color/colorWhite" />
+            </LinearLayout>
+
+        </TableRow>
+
+    </TableLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.github.clans.fab.FloatingActionMenu
+            android:id="@+id/fabPrincipal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:menu_fab_label="menu"
+
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true">
+
+
+
+
+
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/submenu6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:fab_label="Sincrozinar"
+                android:src="@drawable/euro"/>
+
+
+
+
+        </com.github.clans.fab.FloatingActionMenu>
+
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

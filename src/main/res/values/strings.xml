@@ -1,0 +1,209 @@
+<resources>
+    <string name="app_name">SOFTCREDITO</string>
+
+    <!-- Strings related to login -->
+    <string name="label_usuario">Usuario</string>
+    <string name="label_password">Contraseña</string>
+    <string name="accion_ingresar">Ingresar</string>
+    <string name="error_usuario_incorrecto">El usuario es incorrecto</string>
+    <string name="error_password_corto">La contraseña es muy corta</string>
+    <string name="error_password_incorrecto">La contraseña es incorrecta</string>
+    <string name="error_campo_requerido">Este campo es requerido</string>
+    <string name="descripcion_logo">Logo</string>
+
+    <!-- Acciones -->
+    <string name="accion_eliminar">Eliminar</string>
+    <string name="accion_guardar">Guardar</string>
+    <string name="accion_nuevo">Nuevo</string>
+    <string name="accion_sync">Sincronizar</string>
+    <string name="accion_salir">Salir</string>
+    <string name="accion_reiniciar">Reiniciar</string>
+    <string name="accion_editar">Editar</string>
+    <string name="accion_expediente">Expediente</string>
+    <string name="accion_solicitudes">Solicitudes</string>
+    <string name="accion_cotizadores">Cotizadores</string>
+    <string name="accion_pdf">PDF</string>
+    <string name="accion_bitacora_credito">Bitacora de Crédito</string>
+    <string name="accion_pagar">Pagos</string>
+    <string name="accion_archivos">Archivos</string>
+    <string name="accion_firmar">Firmar</string>
+    <string name="accion_limpiar">Limipiar</string>
+
+    <!-- Home -->
+    <string name="seccion_clientes">Clientes</string>
+    <string name="seccion_solicitudes">Solicitudes</string>
+    <string name="seccion_agenda">Agenda</string>
+    <string name="seccion_reporte">Reporte</string>
+    <string name="seccion_mapa">Mapa</string>
+    <string name="seccion_sync">Sincronizar</string>
+    <string name="seccion_scam">Escaneando</string>
+    <string name="seccion_scam_detalle">Mueva la camara hasta que pueda ver completamente el cuadro QR</string>
+    <string name="seccion_firma_detalle">Ingrese su firma en el recuadro blanco</string>
+
+    <!-- Formulario Actividad Mapa-->
+    <string name="titulo_actividad_mapa">Mapa</string>
+
+    <string-array name="array_name2">
+        <item>SI</item>
+        <item>NO</item>
+    </string-array>
+
+    <string-array name="array_name3">
+        <item>Soltero/a</item>
+        <item>Comprometido/a</item>
+        <item>En Relación ( más de 1 Año de noviazgo)</item>
+        <item>Casado/a</item>
+        <item>Unión libre o unión de hecho</item>
+        <item>Separado/a</item>
+        <item>Divorciado/a</item>
+        <item>Viudo/a</item>
+        <item>Noviazgo(período inferior a 1 año de relación amorosa)</item>
+    </string-array>
+
+    <!-- Home -->
+    <string name="abreviacion_contrato">Co.: </string>
+    <string name="abreviacion_clave">Cl.: </string>
+    <string name="abreviacion_atraso">Atraso.: </string>
+
+    <!-- Formulario Actividad inserción -->
+    <string name="hint_campo_texto_lat">Latitud</string>
+    <string name="hint_campo_texto_lon">Longitud</string>
+    <string name="titulo_actividad_insertar_cliente">Nuevo Cliente</string>
+    <string name="titulo_actividad_actividad_clientes">Clientes</string>
+    <string name="titulo_actividad_editar_cliente">Editar Cliente</string>
+    <string name="hint_campo_texto_es_cliente">Es Cliente</string>
+    <string name="hint_campo_texto_tipo_persona">Tipo persona</string>
+    <string name="hint_campo_texto_razon_social">Razón social</string>
+    <string name="hint_campo_texto_nombre1">Primer nombre</string>
+    <string name="hint_campo_texto_nombre2">Segundo nombre</string>
+    <string name="hint_campo_texto_nombre1M">Denominación</string>
+    <string name="hint_campo_texto_apellido_paterno">Apellido paterno</string>
+    <string name="hint_campo_texto_apellido_materno">Apellido materno</string>
+    <string name="hint_campo_texto_curp">CURP</string>
+    <string name="hint_campo_texto_rfc">RFC</string>
+    <string name="hint_campo_texto_ine">INE</string>
+    <string name="hint_campo_texto_fecha_nacimiento">Fecha Nacimiento</string>
+    <string name="hint_campo_texto_estado_civil">Estado Civil</string>
+    <string name="hint_campo_texto_ocupacion">Ocupación</string>
+    <string name="hint_campo_texto_categoria_actividad_economica">Categoría Actividad Economica</string>
+    <string name="hint_campo_texto_actividad_economica">Actividad Economica</string>
+    <string name="hint_campo_texto_contacto">Contacto</string>
+    <string name="hint_campo_texto_relacion_contacto">Relación</string>
+    <string name="hint_campo_texto_telefono">Teléfono</string>
+    <string name="hint_campo_texto_correo">Correo</string>
+    <string name="hint_campo_texto_celular">Celular</string>
+    <string name="hint_campo_texto_pais">País</string>
+    <string name="hint_campo_texto_estado">Estado</string>
+    <string name="hint_campo_texto_municipio">Municipio</string>
+    <string name="hint_campo_texto_localidad">Localidad</string>
+    <string name="hint_campo_texto_colonia">Colonia</string>
+    <string name="hint_campo_texto_codigo_postal">Código Postal</string>
+    <string name="hint_campo_texto_calle">Calle</string>
+    <string name="hint_campo_texto_numero_exterior">Número Exterior</string>
+    <string name="hint_campo_texto_numero_interior">Número Interior</string>
+    <string name="hint_campo_texto_referencia">Referencia</string>
+
+    <!-- Documentos de Clientes -->
+    <string name="titulo_actividad_actividad_documentos_cliente">Expediente</string>
+
+    <!-- Tarjeta de Cliente -->
+    <string name="tarjeta_telefono">Teléfono: </string>
+    <string name="tarjeta_correo">Correo: </string>
+
+    <!-- Formulario Actividad inserción Solicitud -->
+    <string name="titulo_actividad_insertar_solicitud">Nueva Solicitud</string>
+    <string name="titulo_actividad_actividad_solicitudes">Solicitudes</string>
+    <string name="titulo_actividad_editar_solicitud">Editar Solicitud</string>
+    <string name="hint_campo_texto_producto">Producto</string>
+    <string name="hint_campo_texto_banco">Banco</string>
+    <string name="hint_campo_texto_monto">Monto</string>
+    <string name="hint_campo_texto_plazo">Plazo</string>
+    <string name="hint_campo_texto_sobretasa">Tasa Interés</string>
+    <string name="hint_campo_texto_tasa_moratoria">Tasa Mora</string>
+    <string name="hint_campo_texto_tipo_amortizacion">Tipo Amortización</string>
+    <string name="hint_campo_texto_tipo_pago">Tipo Pago</string>
+    <string name="hint_campo_texto_status">Estatus</string>
+
+    <!-- Formulario Actividad inserción Cotizador -->
+    <string name="titulo_actividad_insertar_cotizador">Nueva Cotización</string>
+    <string name="titulo_actividad_actividad_cotizaciones">Cotizaciones</string>
+    <string name="titulo_actividad_editar_cotizador">Editar Cotización</string>
+    <string name="hint_campo_texto_validez">Validez</string>
+    <string name="hint_campo_texto_fecha_disposicion">Disposición</string>
+    <string name="hint_campo_texto_fecha_inicio_amortizaciones">Inicio Amortizaciones</string>
+    <string name="hint_campo_texto_notas">Comentarios</string>
+
+    <!-- Formulario Actividad inserción Bitacora de Credito -->
+    <string name="titulo_actividad_actividad_agenda_solicitudes">Créditos</string>
+    <string name="titulo_actividad_insertar_bitacora_credito">Nueva Bitacora de Crédito</string>
+    <string name="titulo_actividad_actividad_bitacoras_creditos">Bitacoras de Crédito</string>
+    <string name="titulo_actividad_editar_bitacora_credito">Editar Bitacora de Crédito</string>
+    <string name="hint_campo_texto_asunto">Asunto</string>
+    <string name="hint_campo_texto_numero_amortizacion">#Amotización</string>
+    <string name="hint_campo_texto_detalles_pago">Detalles del Pago</string>
+    <string name="hint_campo_texto_descripcion">Descripción</string>
+    <string name="hint_campo_texto_valor_garantia">Valor Garantía</string>
+    <string name="hint_campo_texto_descripcion_garantia">Descripción Garantía</string>
+
+    <!-- Formulario Actividad inserción Bitacora de Credito -->
+    <string name="titulo_actividad_actividad_bitacoras_creditos_archivos">Archivos de Bitacora</string>
+
+    <!-- Formulario Actividad inserción Pagos -->
+    <string name="titulo_actividad_actividad_pagos">Pagos</string>
+    <string name="titulo_actividad_actividad_editar_pago">Editar Pagos</string>
+    <string name="hint_campo_texto_canal">Canal de Cobranza</string>
+    <string name="hint_campo_texto_instrumento">Instrumento Monetario</string>
+
+
+    <!-- Tablas de la sincronizacion -->
+    <string name="titulo_actividad_sync">Sync</string>
+    <string name="sync_tipo_persona">Tipos de Personas</string>
+    <string name="sync_tipo_documento">Tipos de Documentos</string>
+    <string name="sync_tipo_pago">Tipos de Pagos</string>
+    <string name="sync_tipo_amortizacion">Tipos de Amortizaciones</string>
+    <string name="sync_instrumento_monetarios">Instrumentos Monetarios</string>
+    <string name="sync_codigo_postal">Códigos Postales</string>
+    <string name="sync_codigo">Localidades</string>
+    <string name="sync_pais">Paises</string>
+    <string name="sync_estado">Estados</string>
+    <string name="sync_municipio">Municipios</string>
+    <string name="sync_estado_civil">Estados Civiles</string>
+    <string name="sync_categoria_actividad_economica">Categorias de A.E.</string>
+    <string name="sync_actividad_economica">Actividad E.</string>
+    <string name="sync_grupo_cliente">Grupos de Clientes</string>
+    <string name="sync_relacion_contacto">Relaciones de Contactos</string>
+    <string name="sync_documento_requerido">Documentos Requeridos</string>
+    <string name="sync_producto">Productos</string>
+    <string name="sync_banco">Bancos</string>
+    <string name="sync_canal_cobranza">Canales de Cobranza</string>
+    <string name="sync_cliente">Clientes</string>
+    <string name="sync_documento_entregado">Documentos Entregados</string>
+    <string name="sync_archivo_documento_entregado">Archivos de Documentos Entregados</string>
+    <string name="sync_cotizador">Cotizaciones</string>
+    <string name="sync_solicitud">Solicitudes</string>
+    <string name="sync_bitacora_credito">Bitacoras de Crédito</string>
+    <string name="sync_archivo_bitacora_credito">Archivos de Bitacoras de Crédito</string>
+    <string name="sync_pago">Pagos</string>
+    <string name="sync_catalogos">CATÁLOGOS</string>
+    <string name="sync_configuraciones">CONFIGURACIONES</string>
+    <string name="sync_operacion">OPERACIÓN</string>
+
+
+    <!-- Cuenta Sync Adapter -->
+    <string name="tipo_cuenta">com.softcredito.app.cuenta</string>
+
+    <!-- Autoridad del provider -->
+    <string name="autoridad_provider">com.softcredito.app</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_home">Home</string>
+    <string name="title_activity_actividad_home">ActividadHome</string>
+    <string name="titulo_actividad_home">Home</string>
+
+    <string-array name="array_name">
+        <item>Array Item One</item>
+        <item>Array Item Two</item>
+        <item>Array Item Three</item>
+    </string-array>
+</resources>

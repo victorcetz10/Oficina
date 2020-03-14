@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.softcredito.app">
+    <!-- Red -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Ubicación -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- Autenticación -->
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" /> <!-- Fotos -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.location.gps" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- Sincronización -->
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_SYNC_STATS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/MyTheme">
+        <activity android:name=".Sincronizacion"></activity>
+        <activity android:name=".CapturarDocumento" />
+        <activity android:name=".AgregarDocumentos" />
+        <activity android:name=".ui.DocumentosRequeridos" />
+        <activity android:name=".AgregarSolicitud" />
+        <activity android:name=".AgregarEconomia" />
+        <activity android:name=".AgregarProducto" />
+        <activity android:name=".Agregar_TiposPersonas" />
+        <activity android:name=".Spinner" />
+        <activity android:name=".ui.Actividad_CargarBancos" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name=".ui.ActividadIni"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.LoginActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.ActividadHome"
+            android:label="@string/titulo_actividad_home"
+            android:theme="@style/MyTheme" />
+        <activity android:name=".ui.ActividadMapa" />
+        <activity
+            android:name=".ui.ActividadSync"
+            android:label="@string/titulo_actividad_sync"
+            android:theme="@style/MyTheme" />
+        <activity
+            android:name=".ui.ActividadListaClientes"
+            android:parentActivityName=".ui.ActividadHome">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.ActividadHome" />
+        </activity>
+        <activity
+            android:name=".ui.ActividadInsercionCliente"
+            android:parentActivityName=".ui.ActividadListaClientes"
+            android:windowSoftInputMode="adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.ActividadListaClientes" />
+        </activity>
+        <activity
+            android:name=".ui.ActividadDocumentosCliente"
+            android:label="@string/titulo_actividad_actividad_documentos_cliente"
+            android:parentActivityName=".ui.ActividadListaClientes"
+            android:windowSoftInputMode="adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.ActividadListaClientes" />
+        </activity>
+        <activity
+            android:name=".ui.ActividadListaSolicitudes"
+            android:label="@string/titulo_actividad_actividad_solicitudes"
+            android:parentActivityName=".ui.ActividadListaClientes"
+            android:windowSoftInputMode="adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.ActividadListaClientes" />
+        </activity>
+        <activity
+            android:name=".ui.ActividadInsercionSolicitud"
+            android:label="@string/titulo_actividad_insertar_solicitud"
+            android:parentActivityName=".ui.ActividadListaSolicitudes"
+            android:windowSoftInputMode="adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.ActividadListaSolicitudes" />
+        </activity>
+        <activity
+            android:name=".ui.ActividadListaCotizadores"
+            android:label="@string/titulo_actividad_actividad_cotizaciones"
+            android:parentActivityName=".ui.ActividadListaClientes"
+            android:windowSoftInputMode="adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.ActividadListaClientes" />
+        </activity>
+        <activity
+            android:name=".ui.ActividadInsercionCotizador"
+            android:label="@string/titulo_actividad_insertar_cotizador"
+            android:parentActivityName=".ui.ActividadListaCotizadores"
+            android:windowSoftInputMode="adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.ActividadListaCotizadores" />
+        </activity>
+        <activity
+            android:name=".ui.ActividadListaAgendaSolicitudes"
+            android:parentActivityName=".ui.ActividadHome">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.ActividadHome" />
+        </activity>
+        <activity
+            android:name=".ui.ActividadListaBitacorasCredito"
+            android:parentActivityName=".ui.ActividadListaAgendaSolicitudes">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.ActividadListaAgendaSolicitudes" />
+        </activity>
+        <activity
+            android:name=".ui.ActividadInsercionBitacoraCredito"
+            android:parentActivityName=".ui.ActividadListaBitacorasCredito">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.ActividadListaBitacorasCredito" />
+        </activity>
+        <activity
+            android:name=".ui.ActividadListaBitacorasCreditoArchivos"
+            android:parentActivityName=".ui.ActividadListaBitacorasCredito">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.ActividadListaBitacorasCredito" />
+        </activity>
+        <activity
+            android:name=".ui.ActividadFirma"
+            android:parentActivityName=".ui.ActividadFirma">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.ActividadListaBitacorasCredito" />
+        </activity>
+        <activity
+            android:name=".ui.ActividadListaPagos"
+            android:parentActivityName=".ui.ActividadListaAgendaSolicitudes">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.ActividadListaAgendaSolicitudes" />
+        </activity>
+        <activity
+            android:name=".ui.ActividadInsercionPago"
+            android:parentActivityName=".ui.ActividadListaPagos">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.ActividadListaPagos" />
+        </activity>
+        <activity android:name=".ui.AdaptadorDoc" />
+
+        <provider
+            android:name=".provider.ProviderSoftcredito"
+            android:authorities="com.softcredito.app"
+            android:enabled="true"
+            android:exported="true" />
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <service
+            android:name=".sync.ServicioAutenticacion"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/autenticador" />
+        </service>
+        <service
+            android:name=".sync.ServicioSincronizacion"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/sync_adapter" />
+        </service>
+        <service android:name=".service.SoftcreditoLocation" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+    </application>
+
+</manifest>

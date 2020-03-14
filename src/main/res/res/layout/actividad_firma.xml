@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinador"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+                <include
+                    android:id="@+id/toolbar"
+                    layout="@layout/toolbar" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <TableLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@color/colorWhite"
+            android:orientation="vertical"
+            android:weightSum="1.0"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.7"
+                    android:orientation="vertical"
+                    android:background="@color/colorBlue">
+
+                        <com.coatedmoose.customviews.SignatureView
+                            android:id="@+id/signatureView1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="10dp"
+                            android:layout_weight="0.3"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:background="@color/colorBlue"
+                    android:weightSum="1.0">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorSecondary"
+                            android:gravity="center"
+                            android:padding="20dp"
+                            android:text="@string/seccion_firma_detalle"
+                            android:textColor="@color/colorWhite" />
+
+                </LinearLayout>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical"
+                    android:background="@color/colorBlue"
+                    android:weightSum="1.0">
+
+                        <Button
+                            android:id="@+id/btnGuardar"
+                            android:layout_marginTop="20dp"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="0.5"
+                            android:textColor="@color/colorWhite"
+                            android:background="@color/colorOrange"
+                            android:textSize="12sp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="@string/accion_guardar" />
+
+                        <Button
+                            android:id="@+id/btnBorrar"
+                            android:layout_marginTop="20dp"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="0.5"
+                            android:textColor="@color/colorWhite"
+                            android:background="@color/colorAccent"
+                            android:textSize="12sp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="@string/accion_limpiar" />
+
+                </TableRow>
+
+        </TableLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

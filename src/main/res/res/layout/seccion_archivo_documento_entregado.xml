@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:paddingLeft="0dp">
+
+    <!-- A CardView that contains a TextView -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/seccion_archivo_documento_entregado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardPreventCornerOverlap="false"
+        app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <ImageButton
+                        android:id="@+id/btn_eliminar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorWhite"
+                        android:ems="10"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp"
+                        android:padding="0dp"
+                        app:srcCompat="@drawable/icono_eliminar_blue" />
+
+                    <TextView
+                        android:id="@+id/text_descripcion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="14sp"
+                        android:layout_weight="0.90"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text_fecha"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:text=""
+                        android:textSize="8sp"/>
+
+                </TableRow>
+
+            </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
